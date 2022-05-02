@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html style="overflow: hidden">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Hello Bulma!</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <style>
+        .shalien {
+            color: rgba(255, 0, 0, 0.75);
+        }
+    </style>
+</head>
+<body>
+<div class="has-background-black is-black" id="root"></div>
+</body>
+<script type="application/javascript">
+    let root = document.getElementById('root');
+    let lastR = -1;
+    let shalienI = 0;
+
+
+    const shalien = [
+        '<span class="is-size-1 shalien is-large">S</span>',
+        '<span class="is-size-1 shalien is-large">H</span>',
+        '<span class="is-size-1 shalien is-large">A</span>',
+        '<span class="is-size-1 shalien is-large">L</span>',
+        '<span class="is-size-1 shalien is-large">I</span>',
+        '<span class="is-size-1 shalien is-large">E</span>',
+        '<span class="is-size-1 shalien is-large">N</span>'
+    ];
+
+
+    const elements = [
+        '<i class="icon is-size-1 shalien is-large "><ion-icon name="cog"></ion-icon></i>',
+        '<i class="icon is-size-1 shalien is-large"><ion-icon name="desktop"></ion-icon></i>',
+        '<i class="icon is-size-1 shalien is-large"><ion-icon name="phone-portrait"></ion-icon></i>',
+        '<i class="icon is-size-1 shalien is-large"><ion-icon name="game-controller"></ion-icon></i>',
+        '<i class="icon is-size-1 shalien is-large"><ion-icon name="rocket"></ion-icon></i>',
+        '<i class="icon is-size-1 shalien is-large"><ion-icon name="code-slash"></ion-icon></i>',
+    //    'shalien'
+    ];
+
+    function writeShalien() {
+        let piece = shalien[shalienI];
+
+        if(shalienI === shalien.length - 1)
+        {
+            shalienI = 0;
+        }
+        else
+        {
+            shalienI = shalienI + 1;
+        }
+        return piece;
+    }
+
+    function newColumn() {
+        return '<div class="columns ">' + newLine() + '</div>';
+    }
+
+    function newLine() {
+        let base = '<div class="column has-text-centered">';
+
+        let line = '';
+
+        for(let i = 0;i < 30; i++) {
+
+            let element = newIcon();
+
+            if(element === 'shalien')
+            {
+                element = writeShalien();
+            }
+            else if (element === undefined)
+            {
+                continue;
+            }
+
+            line += '&nbsp;' + element + '&nbsp;'
+        }
+
+        return base + line + '</div>';
+    }
+
+    function newIcon() {
+        let r;
+        do {
+            r = Math.round(Math.random() * elements.length);
+        } while (r === lastR)
+
+        lastR = r;
+
+        let element = elements[r];
+
+        if(element === undefined)
+        {
+            return newIcon()
+        }
+        else
+        {
+            return element;
+        }
+
+    }
+
+    for(let i = 0; i < 30; i++) {
+        root.innerHTML += newColumn();
+    }
+
+</script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</html>
