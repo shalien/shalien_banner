@@ -1181,7 +1181,7 @@ b:function b(){},
 dA(){A.dt()},
 dt(){var t={},s=document.querySelector("#countdown")
 s.toString
-t.a=A.b7(10,0)
+t.a=A.b7(1,0)
 A.cu(A.b7(0,1),new A.b1(t,s))},
 b1:function b1(a,b){this.a=a
 this.b=b},
