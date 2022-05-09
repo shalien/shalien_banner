@@ -4,6 +4,10 @@ import 'dart:html';
 
 void main() {
   initCountdown();
+
+  final twitchChat = querySelector('#twitch-chat') as IFrameElement;
+  twitchChat.src = '${twitchChat.src}&parent=${document.domain}';
+
 }
 
 initCountdown() {
