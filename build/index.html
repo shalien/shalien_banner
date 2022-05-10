@@ -9,14 +9,16 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     <link rel="stylesheet" href="styles.css">
     <script defer src="main.dart.js"></script>
+    <!-- <script defer src="abcdefu.js"></script> -->
 </head>
 
-<body class="has-background-black">
-<section class="section has-background-black">
+<body>
+<canvas id="canvas" class="is-absolute has-background-black"></canvas>
+<section class="section has-background-transparent">
     <div class="section">
         <div class="container is-fluid">
 
-                    <p class="is-active is-large is-size-1 has-text-shalien">Shalien</p>
+            <h1 class="is-active is-large is-size-1 has-text-shalien is-underlined title">Shalien</h1>
 
         </div>
     </div>
@@ -24,33 +26,29 @@
     <div class="section">
         <div class="container is-fluid">
             <div class="columns is-multiline">
-                <div class="column is-4 is-vcentered">
-                    <iframe class="is-centered" style="min-height: 50%"
-                            src="https://www.twitch.tv/embed/shalien/chat?parent=chech&darkpopout"
-                            height="540px" width="75%"></iframe>
+                <div class="column is-4 is-vcentered is-paddingless">
+                    <iframe id="twitch-chat" class="is-centered" style="min-height: 50%"
+                            src="https://www.twitch.tv/embed/shalien/chat?parent=github.com&darkpopout"
+                            height="650px" width="75%"></iframe>
                 </div>
                 <div class="column is-6 has-text-left">
-
                     <div class="columns is-multiline is-paddingless">
                         <div class="column is-marginless is-paddingless">
-                            <h2 class="is-size-1 has-text-left has-text-shalien">LE STREAM COMMENCE DANS</h2>
+                            <h2 class="is-size-1 has-text-left has-text-shalien has-text-weight-bold">LE STREAM COMMENCE DANS</h2>
                             <p id="countdown" class="has-text-left has-text-shalien" style="font-size: 250px">--:--</p>
                         </div>
                     </div>
 
                     <div class="columns is-multiline">
                         <div class="column is-half">
-                            <h3 class="is-size-2 has-text-shalien has-background-black-bis">
+                            <p class="is-size-2 has-text-shalien has-text-weight-bold">
                                 <i class="icon is-large">
-                                    <ion-icon name="logo-twitter"></ion-icon></i> : _shalien
-                            </h3>
+                                    <ion-icon name="logo-twitter"></ion-icon>
+                                </i> : _shalien</p>
                         </div>
                         <div class="column is-half">
-                            <h3 class="is-size-2 has-text-shalien has-background-black-bis">
-                                <i class="icon is-large">
-                                    <ion-icon name="logo-twitch"></ion-icon>
-                                </i> : shalien
-                            </h3>
+                            <p class="is-size-2 has-text-shalien"></p>
+
                         </div>
 
                     </div>
@@ -60,6 +58,15 @@
             </div>
         </div>
 
+    </div>
+
+    <div class="section">
+        <div class="columns is-mobile">
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+            <div class="column"></div>
+        </div>
     </div>
 </section>
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>

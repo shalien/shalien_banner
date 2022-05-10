@@ -47,3 +47,13 @@ canvas {
     left: 0;
     z-index: -9999;
 }
+
+.has-background-opacity-0 {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.has-background-overlay {
+    background-blend-mode: overlay;
+}
+
+

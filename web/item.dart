@@ -1,14 +1,15 @@
 class Item {
 
-  final int x;
-  final int y;
-  final num blur;
-  final num radius;
-  final num initialXDirection;
-  final num initialYDirection;
-  final String colorOne;
-  final String colorTwo;
-  final List<num> gradient;
+  double x;
+  double y;
+  double blur;
+  double radius;
+  double initialXDirection;
+  double initialYDirection;
+  double initialBlurDirection;
+  String colorOne;
+  String colorTwo;
+  List<double> gradient;
 
   Item(this.x,
       this.y,
@@ -18,6 +19,6 @@ class Item {
       this.initialYDirection,
       this.colorOne,
       this.colorTwo,
-      this.gradient);
+      this.gradient) : initialBlurDirection = initialXDirection;
 
 }
