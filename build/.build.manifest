@@ -1,8 +1,12 @@
 .dart_tool/package_config.json
 .packages
-abcdefu.js
-index.html
-main.dart.js
+break.html
+css/styles.css
+ending.html
+incoming.html
+js/break.dart.js
+js/ending.dart.js
+js/incoming.dart.js
 packages/$sdk/_internal/strong.sum
 packages/$sdk/dev_compiler/kernel/amd/dart_sdk.js
 packages/$sdk/dev_compiler/kernel/amd/require.js
@@ -18,4 +22,3 @@ packages/build_runner/src/server/graph_viz.html
 packages/build_runner/src/server/graph_viz.js
 packages/build_runner/src/server/graph_viz_main.dart.js
 packages/build_web_compilers/src/dev_compiler_stack_trace/stack_trace_mapper.dart.js
-styles.css
